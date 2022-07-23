@@ -7,8 +7,8 @@ This setup and run procedure assumes you have Ruby, Ruby on rails framework, Rub
 ## Getting Started
 
 - clone the repository `$ git clone https://github.com/Gnwin/blogapp.git`
-- go to the project directory `$ cd f/data-model`
-- switch to f/data-model branch with `git checkout f/data-model`
+- go to the project directory `$ cd f/process-data`
+- switch to f/process-data branch with `git checkout f/process-data`
 
 ## Built With
 
