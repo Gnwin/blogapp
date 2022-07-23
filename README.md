@@ -7,8 +7,8 @@ This setup and run procedure assumes you have Ruby, Ruby on rails framework, Rub
 ## Getting Started
 
 - clone the repository `$ git clone https://github.com/Gnwin/blogapp.git`
-- go to the project directory `$ cd f/process-data`
-- switch to f/process-data branch with `git checkout f/process-data`
+- go to the project directory `$ cd f/validations-modelspecs`
+- switch to f/validations-modelspecs branch with `git checkout f/validations-modelspecs`
 
 ## Built With
 
