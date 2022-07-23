@@ -1,24 +1,44 @@
-# README
+# Blog App
+A fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
+This setup and run procedure assumes you have Ruby, Ruby on rails framework, Rubocop, css stylelint, sql and rspec installed.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+- clone the repository `$ git clone https://github.com/Gnwin/blogapp.git`
+- go to the project directory `$ cd f/data-model`
+- switch to f/data-model branch with `git checkout f/data-model`
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby
+- Ruby on Rails
+- Javascript
 
-* Database creation
+## Testing
 
-* Database initialization
+- clone the repository with this command `$ git clone https://github.com/Gnwin/blogapp.git`
+- switch to f/test branch with this command `git checkout f/test`
+- at the root level of the project run the command `rspec`
+- see test results in the terminal
 
-* How to run the test suite
+## Author
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Godwin Nwachukwu**
 
-* Deployment instructions
+- GitHub: [@Gnwin](https://github.com/Gnwin)
+- Twitter [@gmarxr](https://twitter.com/gmarxr)
+- LinkedIn: [Godwin Nwachukwu](https://www.linkedin.com/in/n-gwin/)
 
-* ...
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+
+## Show your support
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
