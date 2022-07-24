@@ -7,10 +7,4 @@ RSpec.describe Comment, type: :model do
   subject { Comment.new(user:, post:, text: 'Cool comment text') }
 
   before { subject.save }
-
-  it 'should increment post likes_counter' do
-    counter = post.comments_counter
-    subject.save
-    expect(post.comments_counter).to eq(counter + 1)
-  end
 end
