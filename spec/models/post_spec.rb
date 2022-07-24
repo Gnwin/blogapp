@@ -24,4 +24,10 @@ RSpec.describe Post, type: :model do
     Comment.create(text: 'text for post 6', user:, post: subject)
     expect(subject.recent_comments.size).to eq(5)
   end
+
+  it 'expect post counter to increment' do
+    counter = user.posts_counter + 1
+    subject.save
+    expect(user.posts_counter + 1).to eq(counter)
+  end
 end

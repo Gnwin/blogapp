@@ -7,4 +7,11 @@ RSpec.describe Like, type: :model do
   subject { Like.new(user:, post:) }
 
   before { subject.save }
+
+  it 'should increment post likes_counter' do
+    # subject { Like.new(user: user, post: post) }
+    counter = post.likes_counter + 1
+    subject.save
+    expect(post.likes_counter + 1).to eq(counter)
+  end
 end
