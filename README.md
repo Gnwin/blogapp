@@ -7,8 +7,10 @@ This setup and run procedure assumes you have Ruby, Ruby on rails framework, Rub
 ## Getting Started
 
 - clone the repository `$ git clone https://github.com/Gnwin/blogapp.git`
-- go to the project directory `$ cd f/validations-modelspecs`
-- switch to f/validations-modelspecs branch with `git checkout f/validations-modelspecs`
+- go to the project directory `$ cd f/controllers`
+- switch to f/validations-modelspecs branch with `git checkout f/controllers`
+- run `bundle install`
+- start the server with this command: `rails server`
 
 ## Built With
 
@@ -20,7 +22,7 @@ This setup and run procedure assumes you have Ruby, Ruby on rails framework, Rub
 
 - clone the repository with this command `$ git clone https://github.com/Gnwin/blogapp.git`
 - switch to f/test branch with this command `git checkout f/test`
-- at the root level of the project run the command `rspec`
+- at the root level of the project run the command `rspec spec`
 - see test results in the terminal
 
 ## Author
