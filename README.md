@@ -7,10 +7,11 @@ This setup and run procedure assumes you have Ruby, Ruby on rails framework, Rub
 ## Getting Started
 
 - clone the repository `$ git clone https://github.com/Gnwin/blogapp.git`
-- go to the project directory `$ cd f/controllers`
-- switch to f/validations-modelspecs branch with `git checkout f/controllers`
+- go to the project directory `$ cd blogapp`
+- switch to f/controllers-specs branch with `git checkout f/controllers-specs`
 - run `bundle install`
 - start the server with this command: `rails server`
+- at the root level of the project run the command `rspec spec`
 
 ## Built With
 
