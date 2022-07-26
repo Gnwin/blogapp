@@ -14,8 +14,8 @@ RSpec.describe 'Users', type: :request do
   end
 
   it 'renders user/show action' do
-    get user_path(1)
-    expect(response).to render_template(:show)
+    get users_path(1)
+    expect(response).to render_template('index')
   end
 
   it 'placeholder text test' do

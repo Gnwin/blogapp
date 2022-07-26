@@ -13,7 +13,7 @@ RSpec.describe 'Posts', type: :request do
     expect(response).to render_template('index')
   end
 
-  it 'renders the index template' do
+  it 'renders the show template' do
     get user_post_path(2, 1)
     expect(response).to render_template(:show)
   end
