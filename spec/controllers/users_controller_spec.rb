@@ -13,7 +13,7 @@ RSpec.describe 'Users', type: :request do
     expect(response).to render_template('index')
   end
 
-  it 'renders user/show action' do
+  it 'renders index action' do
     get users_path(1)
     expect(response).to render_template('index')
   end
