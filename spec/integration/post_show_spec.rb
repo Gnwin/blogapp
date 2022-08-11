@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'Post', type: :system do
   describe 'show page' do
-
     before :each do
       @user = User.create(name: 'micheal', photo: 'allamurotov@mail.ru', bio: 'bio')
       @post = Post.create(user_id: @user.id, title: 'title', text: 'text')
@@ -46,7 +45,5 @@ RSpec.describe 'Post', type: :system do
         expect(page).to have_text(i.text)
       end
     end
-
   end
-
 end

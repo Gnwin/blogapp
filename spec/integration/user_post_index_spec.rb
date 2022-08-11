@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'User Posts', type: :system do
   describe 'index page' do
-
     before :each do
       @user = User.create(name: 'micheal', photo: 'allamurotov@mail.ru', bio: 'bio')
       @post = Post.create(user_id: @user.id, title: 'title', text: 'text')
@@ -52,10 +51,8 @@ RSpec.describe 'User Posts', type: :system do
     end
 
     it "When I click on a post, it redirects me to that post's show page" do
-      click_link "Post 1"
-      expect(page).to have_current_path("/users/25/posts/25")
+      click_link 'Post 1'
+      expect(page).to have_current_path('/users/25/posts/25')
     end
-
   end
-
 end

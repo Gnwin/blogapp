@@ -1,7 +1,6 @@
 require 'rails_helper'
 require 'pry'
 
-
 RSpec.describe 'Users', type: :system do
   describe 'index page' do
     before :each do
@@ -48,8 +47,8 @@ RSpec.describe 'Users', type: :system do
     end
 
     it "When I click on a post, it redirects me to that post's show page" do
-      click_link "Post 1"
-      expect(page).to have_current_path("/users/16/posts/16")
+      click_link 'Post 1'
+      expect(page).to have_current_path('/users/16/posts/16')
     end
   end
 end
