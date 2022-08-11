@@ -8,8 +8,10 @@ This setup and run procedure assumes you have Ruby, Ruby on rails framework, Rub
 
 - clone the repository `$ git clone https://github.com/Gnwin/blogapp.git`
 - go to the project directory `$ cd blogapp`
-- switch to f/forms branch with `git checkout f/forms`
+- switch to f/forms branch with `git checkout f/integration-specs-n+1-queries`
 - run `bundle install`
+- run rspec `rspec spec/integration` to see test result
+  optionally:
 - start the server with this command: `rails server`
 
 ## Built With
