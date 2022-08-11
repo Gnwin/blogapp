@@ -17,13 +17,13 @@ Rails.application.configure do
     # Bullet.stacktrace_excludes = [ 'their_gem', 'their_middleware', ['my_file.rb', 'my_method'], ['my_file.rb', 16..20] ]
     # Bullet.slack = { webhook_url: 'http://some.slack.url', channel: '#default', username: 'notifier' }
 
-    Bullet.sentry = true
-    Bullet.honeybadger = true
-    Bullet.bugsnag = true
-    Bullet.appsignal = true
-    Bullet.airbrake = true
-    Bullet.rollbar = true
-    Bullet.skip_html_injection = false
+    # Bullet.sentry = true
+    # Bullet.honeybadger = true
+    # Bullet.bugsnag = true
+    # Bullet.appsignal = true
+    # Bullet.airbrake = true
+    # Bullet.rollbar = true
+    # Bullet.skip_html_injection = false
   end
 
   # Settings specified here will take precedence over those in config/application.rb.

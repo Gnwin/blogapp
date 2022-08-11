@@ -1,43 +1,57 @@
 require 'rails_helper'
 
-RSpec.describe 'User Show', type: :system do
-  user = User.first
-  (1..3).each { |a| Post.create(user:, title: "some title #{a + 1}", text: "some text #{a + 1}") }
+RSpec.describe 'Users', type: :system do
+  describe 'show page' do
 
-  it 'can see the users profile picture' do
-    visit user_path(user.id)
-    expect(page.body).to include('img_placeholder')
-  end
+    before :each do
+      @user = User.create(name: 'micheal', photo: 'allamurotov@mail.ru', bio: 'bio')
+      @post = Post.create(user_id: @user.id, title: 'title', text: 'text')
+      @comment = Comment.create(user_id: @user.id, post_id: @post.id, text: 'some text')
+      visit user_path(@user.id)
+    end
 
-  it 'can see the current user name' do
-    visit user_path(user.id)
-    expect(page.body).to include(user.name)
-  end
+    # before(:each) { visit user_path(@user.id) }
 
-  it 'can see Number of Posts' do
-    visit user_path(user.id)
-    expect(page.body).to include('Number of Posts')
-  end
+    it 'can see profile picture for each user' do
+      expect(page.find('.img_placeholder1')['alt']).to eq('some img')
+    end
 
-  it 'can see Bio' do
-    visit user_path(user.id)
-    expect(page.body).to include(user.bio)
-  end
+    it "can see user's username" do
+      user = User.first
+      expect(page).to have_text(user.name)
+    end
 
-  it 'can see 3 recent posts' do
-    posts = user.recent_posts.map(&:text)
-    visit user_path(user.id)
-    expect(page.body).to include(*posts)
-  end
+    it 'can see the number of posts the user has written' do
+      user = User.first
+      expect(page).to have_text(user.posts.count)
+    end
 
-  it 'Checks if the see all posts button appears' do
-    visit user_path(user.id)
-    expect(page.has_button?('See all posts')).to eq true
-  end
+    it "can see the user's bio" do
+      user = User.first
+      expect(page).to have_text(user.bio)
+    end
 
-  it 'Checks navigation from clicking see all posts button' do
-    visit user_path(user.id)
-    click_button('See all posts')
-    expect(current_path).to eq user_posts_path(user.id)
+    it "should see user's three posts" do
+      user = User.first
+      user.posts.limit(3).each do |i|
+        expect(page).to have_text(i.text)
+      end
+    end
+
+    it 'can see a button that lets see all the posts' do
+      expect(page).to have_text('See all posts')
+    end
+
+    it "When I click a user's post, it redirects me to that post's show page" do
+      user = User.first
+      click_link "Post 1"
+      expect(page).to have_current_path("/users/32/posts/32")
+    end
+
+    it "When I click to see all posts, it redirects me to the user's post's index page" do
+      user = User.first
+      click_link 'See all posts'
+      expect(page).to have_current_path("/users/#{user.id}/posts")
+    end
   end
 end

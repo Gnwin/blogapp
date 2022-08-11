@@ -1,9 +1,8 @@
 require 'rails_helper'
-require 'pry'
 
-
-RSpec.describe 'Users', type: :system do
+RSpec.describe 'User Posts', type: :system do
   describe 'index page' do
+
     before :each do
       @user = User.create(name: 'micheal', photo: 'allamurotov@mail.ru', bio: 'bio')
       @post = Post.create(user_id: @user.id, title: 'title', text: 'text')
@@ -11,18 +10,20 @@ RSpec.describe 'Users', type: :system do
       visit user_posts_path(@user.id)
     end
 
-    # before(:each) { visit user_posts_path(@user.id) }
+    # before(:each) { visit user_posts_path(8) }
 
     it "can see the user's profile picture" do
       expect(page.find('.img_placeholder1')['alt']).to eq('some img')
     end
 
     it "can see user's username" do
-      expect(page).to have_text(@user.name)
+      user = User.first
+      expect(page).to have_text(user.name)
     end
 
     it 'can see the number of posts the user has written' do
-      expect(page).to have_text(@user.posts.count)
+      user = User.first
+      expect(page).to have_text(user.posts.count)
     end
 
     it "can see a post's title" do
@@ -32,7 +33,8 @@ RSpec.describe 'Users', type: :system do
     end
 
     it "can see some of the post's body" do
-      @user.posts.each do |i|
+      user = User.first
+      user.posts.each do |i|
         expect(page).to have_text(i.text)
       end
     end
@@ -42,16 +44,20 @@ RSpec.describe 'Users', type: :system do
     end
 
     it 'can see how many comments a post has' do
-      expect(page).to have_text(@post.comments.count)
+      post = Post.first
+      expect(page).to have_text(post.comments.count)
     end
 
     it 'can see how many likes a post has' do
-      expect(page).to have_text(@post.likes.count)
+      post = Post.first
+      expect(page).to have_text(post.likes.count)
     end
 
     it "When I click on a post, it redirects me to that post's show page" do
       click_link "Post 1"
-      expect(page).to have_current_path("/users/16/posts/16")
+      expect(page).to have_current_path("/users/25/posts/25")
     end
+
   end
+
 end

@@ -40,6 +40,8 @@ gem 'jbuilder'
 
 gem 'bullet', group: 'development'
 
+gem 'pry'
+
 gem 'uniform_notifier'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

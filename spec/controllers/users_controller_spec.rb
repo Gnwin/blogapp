@@ -21,5 +21,5 @@ RSpec.describe 'Users', type: :request do
   it 'placeholder text test' do
     get users_path
     expect(response.body).to include('user/index')
-  end
+  # end
 end
