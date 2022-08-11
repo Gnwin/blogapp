@@ -54,5 +54,11 @@ RSpec.describe 'User Posts', type: :system do
       click_link 'Post 1'
       expect(page).to have_current_path('/users/25/posts/25')
     end
+
+    it 'see a section for pagination if there are more posts than fit on the view.' do
+      expect(page).to have_content('1')
+      expect(page).to have_content('Next Page')
+      expect(page).to have_content('Previous Page')
+    end
   end
 end

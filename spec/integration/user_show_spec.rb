@@ -41,7 +41,7 @@ RSpec.describe 'Users', type: :system do
 
     it "When I click a user's post, it redirects me to that post's show page" do
       click_link 'Post 1'
-      expect(page).to have_current_path('/users/32/posts/32')
+      expect(page).to have_current_path('/users/33/posts/33')
     end
 
     it "When I click to see all posts, it redirects me to the user's post's index page" do
