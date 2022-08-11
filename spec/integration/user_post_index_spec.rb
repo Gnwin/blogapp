@@ -10,8 +10,6 @@ RSpec.describe 'User Posts', type: :system do
       visit user_posts_path(@user.id)
     end
 
-    # before(:each) { visit user_posts_path(8) }
-
     it "can see the user's profile picture" do
       expect(page.find('.img_placeholder1')['alt']).to eq('some img')
     end
