@@ -27,7 +27,7 @@ Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
-  Max: 42
+  Max: 60
 
 
 Style/Documentation:
@@ -64,6 +64,8 @@ Lint/AmbiguousBlockAssociation:
 Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
+  Enabled: false
+Lint/UselessAssignment:
   Enabled: false
 Style/HashEachMethods:
   Enabled: false
