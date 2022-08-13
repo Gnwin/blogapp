@@ -6,7 +6,6 @@ class PostsController < ApplicationController
     @page = 0 if @page.negative? || @page > (Post.count / POSTS_PER_PAGE)
 
     @user = User.find(params[:user_id])
-    # @posts = Post.where(user: params[:user_id]).includes(:comments)
     @posts = @user.posts.includes(:comments)
     @all_posts = Post.where(user: params[:user_id])
     @comments = Comment.where(post_id: params[:user_id])
