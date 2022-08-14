@@ -33,6 +33,8 @@ gem 'devise'
 
 gem 'cancancan'
 
+gem 'rack-cors'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -70,6 +72,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'capybara'
+  gem 'dotenv-rails'
 end
 
 group :development do
