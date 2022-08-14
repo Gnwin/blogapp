@@ -44,6 +44,8 @@ gem 'cancancan'
 
 gem 'bullet', group: 'development'
 
+gem 'jwt'
+
 gem 'pry'
 
 gem 'uniform_notifier'
@@ -66,6 +68,8 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'capybara'
 end
 
 group :development do
